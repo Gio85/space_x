@@ -6,3 +6,5 @@
 ![!npm type definitions](https://img.shields.io/npm/types/typescript)
 
 This is a side project built with React and Redux with AntDesign as framework using the SpaceX API [https://github.com/r-spacex/SpaceX-API](https://github.com/r-spacex/SpaceX-API).
+
+In order to see the progect working, simply run `yarn start` in the folder dicerctory
