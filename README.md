@@ -7,4 +7,4 @@
 
 This is a side project built with React and Redux with AntDesign as framework using the SpaceX API [https://github.com/r-spacex/SpaceX-API](https://github.com/r-spacex/SpaceX-API).
 
-In order to see the progect working, simply run `yarn start` in the folder dicerctory
+The project is available at [https://gio85.github.io/space_x/](https://gio85.github.io/space_x/)
