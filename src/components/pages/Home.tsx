@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { IRootStore } from '../../types'
 import { fetchCompanyDetailsThunk } from '../../store/features/companyDetailsSlice'
 import { Descriptions, Typography } from 'antd'
+import { BaseLayout } from '../shared/BaseLayout'
 
 const { Title } = Typography
 
@@ -17,7 +18,7 @@ export const Home: React.FC = () => {
   }, [data, dispatch])
 
   return (
-    <>
+    <BaseLayout>
       {data && (
         <div>
           <Title>Company Details</Title>
@@ -39,6 +40,6 @@ export const Home: React.FC = () => {
           </Descriptions>
         </div>
       )}
-    </>
+    </BaseLayout>
   )
 }

@@ -4,8 +4,14 @@ export enum HOST {
   API = 'https://api.spacexdata.com/v4'
 }
 
-export enum ENDPOINT {
-  COMPANY = 'company'
+export enum API_ENDPOINT {
+  COMPANY = 'company',
+  CAPSULES= 'capsules'
+}
+
+export enum APP_ENDPOINT {
+  HOME = '/',
+  CAPSULES= 'capsules'
 }
 
 export enum HTTP_METHOD {
