@@ -21,8 +21,13 @@ export const SideBar: React.FC = () => {
   const [collapsed, setCollapsed] = useState<boolean>(false)
 
   return (
-    <Sider collapsible collapsed={collapsed} onCollapse={(collapsed) => setCollapsed(collapsed)}>
-      <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
+    <Sider
+      collapsible
+      collapsed={collapsed}
+      onCollapse={(collapsed) => setCollapsed(collapsed)}
+      style={{ paddingTop: '10vh' }}
+    >
+      <Menu theme="dark" mode="inline">
         <Menu.Item key="1" icon={<BarsOutlined />}>
           <Link to={APP_ENDPOINT.HOME}>Company Info</Link>
         </Menu.Item>
@@ -30,31 +35,31 @@ export const SideBar: React.FC = () => {
           <Link to={APP_ENDPOINT.CAPSULES}>Capsules</Link>
         </Menu.Item>
         <Menu.Item key="3" icon={<RocketOutlined />}>
-          Rockets
+          <Link to={APP_ENDPOINT.ROCKETS}>Rockets</Link>
         </Menu.Item>
         <Menu.Item key="4" icon={<TeamOutlined />}>
-          Crew
+          <Link to={APP_ENDPOINT.CREW}>Crew</Link>
         </Menu.Item>
         <Menu.Item key="5" icon={<DingtalkOutlined />}>
-          Dragons
+          <Link to={APP_ENDPOINT.DRAGONS}>Dragons</Link>
         </Menu.Item>
         <Menu.Item key="6" icon={<ExpandOutlined />}>
-          Landpads
+          <Link to={APP_ENDPOINT.LANDPADS}>Landpads</Link>
         </Menu.Item>
         <Menu.Item key="7" icon={<ToTopOutlined />}>
-          Launches
+          <Link to={APP_ENDPOINT.LAUNCHES}>Launches</Link>
         </Menu.Item>
         <Menu.Item key="8" icon={<UploadOutlined />}>
-          Launchpads
+          <Link to={APP_ENDPOINT.LAUNCHPADS}>Launchpads</Link>
         </Menu.Item>
         <Menu.Item key="9" icon={<SubnodeOutlined />}>
-          Payloads
+          <Link to={APP_ENDPOINT.PAYLOADS}>Payloads</Link>
         </Menu.Item>
         <Menu.Item key="10" icon={<CarOutlined />}>
-          Roadster Info
+          <Link to={APP_ENDPOINT.ROADSTER}>Roadster Info</Link>
         </Menu.Item>
         <Menu.Item key="11" icon={<CompassOutlined />}>
-          Ships
+          <Link to={APP_ENDPOINT.SHIPS}>Ships</Link>
         </Menu.Item>
       </Menu>
     </Sider>

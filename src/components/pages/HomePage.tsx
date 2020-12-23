@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { IRootStore } from '../../types'
-import { fetchCompanyDetailsThunk } from '../../store/features/companyDetailsSlice'
+import { fetchCompanyDetailsThunk } from '../../store/features'
 import { Descriptions, Typography } from 'antd'
 import { BaseLayout } from '../shared/BaseLayout'
 
 const { Title } = Typography
 
-export const Home: React.FC = () => {
+export const HomePage: React.FC = () => {
   const dispatch = useDispatch()
   const data = (useSelector((store: IRootStore) => store.companyDetails.data) as unknown) as Record<string, any>
 

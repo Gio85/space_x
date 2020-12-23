@@ -17,7 +17,7 @@ const StyledLayout = styled(Layout)`
 `
 
 const StyledContent = styled(Content)`
-  margin: 0 16px
+  margin: 0 16px;
 `
 
 const StyledDiv = styled.div({
@@ -34,11 +34,9 @@ export const BaseLayout: React.FC = (props) => {
     <StyledLayout>
       <SideBar />
       <Layout className="site-layout">
-        <StyledHeader className="site-layout-background">SpaceX News</StyledHeader>
+        <StyledHeader className="site-layout-background">SpaceX</StyledHeader>
         <StyledContent>
-          <StyledDiv className="site-layout-background">
-            {props.children}
-          </StyledDiv>
+          <StyledDiv className="site-layout-background">{props.children}</StyledDiv>
         </StyledContent>
         <StyledFooter>SpaceX created with Ant Design ©2018</StyledFooter>
       </Layout>
