@@ -1,15 +1,18 @@
-import { API_ENDPOINT, ApiResponse, IHttpClient } from '../../../types'
-import { ICrew } from '../../../types/crew'
+import { API_ENDPOINT, ApiResponse, ICrew } from '../../../types'
+import { BaseEndpoint } from './shared/base'
+import { HttpClient } from '../http'
 
-export class CrewEndpoint {
+export class CrewEndpoint extends BaseEndpoint<ICrew> {
   public path = `${API_ENDPOINT.CREW}`
-  constructor(protected readonly client: IHttpClient) {}
-
-  public list(): ApiResponse<ICrew[]> {
-    return this.client.get<ICrew[]>(this.path)
+  constructor(protected readonly client: HttpClient) {
+    super(client);
   }
 
-  public read(id: string): ApiResponse<ICrew> {
-    return this.client.get<ICrew>(`${this.path}/${id}`)
+  list(): ApiResponse<ICrew[]> {
+    return super.list(this.path)
   }
+
+  read(id: string): ApiResponse<ICrew> {
+   return super.read(this.path, id)
+ }
 }

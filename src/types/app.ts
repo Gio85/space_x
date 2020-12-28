@@ -1,6 +1,7 @@
 import { Action, ThunkAction } from '@reduxjs/toolkit'
 import { ICompany } from './company'
 import { ICrew } from './crew'
+import { ICapsule } from './capsules'
 
 export enum HOST {
   API = 'https://api.spacexdata.com/v4'
@@ -59,4 +60,5 @@ export interface IRootStore {
   companyDetails: IDataStore<ICompany>
   crewList: IDataStore<ICrew[]>
   crewRead: IDataStore<ICrew>
+  capsulesList: IDataStore<ICapsule>
 }
