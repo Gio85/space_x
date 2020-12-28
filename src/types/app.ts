@@ -21,17 +21,17 @@ export enum API_ENDPOINT {
 }
 
 export enum APP_ENDPOINT {
-  HOME = '',
-  CAPSULES= 'capsules',
-  ROCKETS = 'rockets',
-  CREW = 'crew',
-  DRAGONS = 'dragons',
-  LANDPADS = 'landpads',
-  LAUNCHES = 'launches',
-  LAUNCHPADS ='launchpads',
-  PAYLOADS = 'payloads',
-  ROADSTER = 'roadster',
-  SHIPS = 'ships'
+  HOME = '/',
+  CAPSULES= '/capsules',
+  ROCKETS = '/rockets',
+  CREW = '/crew',
+  DRAGONS = '/dragons',
+  LANDPADS = '/landpads',
+  LAUNCHES = '/launches',
+  LAUNCHPADS ='/launchpads',
+  PAYLOADS = '/payloads',
+  ROADSTER = '/roadster',
+  SHIPS = '/ships'
 }
 
 export enum HTTP_METHOD {

@@ -9,10 +9,10 @@ import { CapsulesList } from '../../pages/CapsulesList'
 export const AppRouterProvider: React.FC = () => (
   <HashRouter>
     <Switch>
-      <Route path={`/${APP_ENDPOINT.CREW}/:id`} component={CrewReadPage} />
-      <Route path={`/${APP_ENDPOINT.CREW}`} component={CrewListPage} />
-      <Route path={`/${APP_ENDPOINT.CAPSULES}`} component={CapsulesList} />
-      <Route exact path={'/'} component={HomePage} />
+      <Route exact path={`${APP_ENDPOINT.CREW}/:id`} component={CrewReadPage} />
+      <Route exact path={APP_ENDPOINT.CREW} component={CrewListPage} />
+      <Route exact path={APP_ENDPOINT.CAPSULES} component={CapsulesList} />
+      <Route exact path="/" component={HomePage} />
     </Switch>
   </HashRouter>
 )
