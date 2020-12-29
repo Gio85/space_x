@@ -8,6 +8,7 @@
 [![!react](https://img.shields.io/badge/framework-react-blue)](https://github.com/facebook/react)
 [![state container: redux](https://img.shields.io/badge/state%20container-redux-blueviolet)](https://github.com/reduxjs/redux)
 [![ui library: ant design](https://img.shields.io/badge/ui%20library-AntDesign-red)](https://github.com/ant-design/ant-design)
+[![deploy: gh pages](https://img.shields.io/badge/deploy-ghPages-black)](https://github.com/tschaub/gh-pages)
 
 This is a side project built with React and Redux with AntDesign as framework using the SpaceX API [https://github.com/r-spacex/SpaceX-API](https://github.com/r-spacex/SpaceX-API).
 
