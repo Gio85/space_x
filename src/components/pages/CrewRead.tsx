@@ -45,7 +45,6 @@ export const CrewReadPage: React.FC = () => {
                 <Descriptions.Item label="Agency" labelStyle={{ fontWeight: 'bold' }}>
                   {crewMember.agency}
                 </Descriptions.Item>
-                {/* TODO: make these clickable */}
                 <Descriptions.Item label="Launches" labelStyle={{ fontWeight: 'bold' }}>
                   {crewMember.launches}
                 </Descriptions.Item>

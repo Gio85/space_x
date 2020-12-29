@@ -2,6 +2,7 @@ import { Action, ThunkAction } from '@reduxjs/toolkit'
 import { ICompany } from './company'
 import { ICrew } from './crew'
 import { ICapsule } from './capsules'
+import { IRocket } from './rockets'
 
 export enum HOST {
   API = 'https://api.spacexdata.com/v4'
@@ -11,27 +12,14 @@ export enum API_ENDPOINT {
   COMPANY = 'company',
   CAPSULES= 'capsules',
   ROCKETS = 'rockets',
-  CREW = 'crew',
-  DRAGONS = 'dragons',
-  LANDPADS = 'landpads',
-  LAUNCHES = 'launches',
-  LAUNCHPADS ='launchpads',
-  PAYLOADS = 'payloads',
-  ROADSTER = 'roadster',
+  CREW = 'crew'
 }
 
 export enum APP_ENDPOINT {
   HOME = '/',
   CAPSULES= '/capsules',
   ROCKETS = '/rockets',
-  CREW = '/crew',
-  DRAGONS = '/dragons',
-  LANDPADS = '/landpads',
-  LAUNCHES = '/launches',
-  LAUNCHPADS ='/launchpads',
-  PAYLOADS = '/payloads',
-  ROADSTER = '/roadster',
-  SHIPS = '/ships'
+  CREW = '/crew'
 }
 
 export enum HTTP_METHOD {
@@ -61,4 +49,6 @@ export interface IRootStore {
   crewList: IDataStore<ICrew[]>
   crewRead: IDataStore<ICrew>
   capsulesList: IDataStore<ICapsule>
+  rocketsList: IDataStore<IRocket[]>
+  rocketRead: IDataStore<IRocket>
 }

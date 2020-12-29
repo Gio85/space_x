@@ -3,11 +3,11 @@ import { BaseLayout } from '../shared/BaseLayout'
 import { Table, Tag, Typography } from 'antd'
 import { useDispatch, useSelector } from 'react-redux'
 import { ICapsule, IRootStore } from '../../types'
-import { fetchCapsulesListThunk } from '../../store/features/capsulesListSlice'
+import { fetchCapsulesListThunk } from '../../store/features'
 
 const { Title } = Typography
 
-export const CapsulesList: React.FC = () => {
+export const CapsulesListPage: React.FC = () => {
   const dispatch = useDispatch()
   const data = (useSelector((store: IRootStore) => store.capsulesList.data) as unknown) as ICapsule[]
 
@@ -22,7 +22,6 @@ export const CapsulesList: React.FC = () => {
       <Title>Capsules</Title>
       {data && (
         <Table<ICapsule> rowKey="id" dataSource={data} size="middle" bordered>
-          <Table.Column<ICapsule> key="id" title="ID" dataIndex="id" align="center" />
           <Table.Column<ICapsule> key="serial" title="Serial" dataIndex="serial" align="center" />
           <Table.Column<ICapsule> key="type" title="Type" dataIndex="type" align="center" />
           <Table.Column<ICapsule> key="water_landings" title="Water Landings" dataIndex="water_landings" align="center" />

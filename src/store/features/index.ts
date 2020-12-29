@@ -1,3 +1,7 @@
 export * from './companyDetailsSlice'
 export * from './errors/errorsSlice'
 export * from './crewListSlice'
+export * from './crewReadSlice'
+export * from './capsulesListSlice'
+export * from './rocketsListSlice'
+export * from './rocketReadSlice'

@@ -1,17 +1,16 @@
 import React from 'react'
 import { HashRouter, Route, Switch } from 'react-router-dom'
-import { HomePage } from '../../pages/HomePage'
 import { APP_ENDPOINT } from '../../../types'
-import { CrewListPage } from '../../pages/CrewList'
-import { CrewReadPage } from '../../pages/CrewRead'
-import { CapsulesList } from '../../pages/CapsulesList'
+import { CapsulesListPage, CrewListPage, CrewReadPage, HomePage, RocketReadPage, RocketsListPage } from '../../pages'
 
 export const AppRouterProvider: React.FC = () => (
   <HashRouter>
     <Switch>
       <Route exact path={`${APP_ENDPOINT.CREW}/:id`} component={CrewReadPage} />
       <Route exact path={APP_ENDPOINT.CREW} component={CrewListPage} />
-      <Route exact path={APP_ENDPOINT.CAPSULES} component={CapsulesList} />
+      <Route exact path={APP_ENDPOINT.CAPSULES} component={CapsulesListPage} />
+      <Route exact path={`${APP_ENDPOINT.ROCKETS}/:id`} component={RocketReadPage} />
+      <Route exact path={APP_ENDPOINT.ROCKETS} component={RocketsListPage} />
       <Route exact path="/" component={HomePage} />
     </Switch>
   </HashRouter>
