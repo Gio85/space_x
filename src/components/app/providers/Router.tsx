@@ -4,7 +4,7 @@ import { APP_ENDPOINT } from '../../../types'
 import { CapsulesListPage, CrewListPage, CrewReadPage, HomePage, RocketReadPage, RocketsListPage } from '../../pages'
 
 export const AppRouterProvider: React.FC = () => (
-  <HashRouter>
+  <HashRouter basename={window.location.pathname || ''}>
     <Switch>
       <Route exact path={`${APP_ENDPOINT.CREW}/:id`} component={CrewReadPage} />
       <Route exact path={APP_ENDPOINT.CREW} component={CrewListPage} />
